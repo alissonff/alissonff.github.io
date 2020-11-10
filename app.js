@@ -170,7 +170,7 @@ function removeLocalTodos(todo){
   }
   const todoIndex = todo.children[0].innerText;
   todos.forEach(function (innerTodo, index) {
-    console.log(innerTodo, todoInput);
+    
     if (innerTodo.todo === todoIndex) {
     } else {
       updatedTodos.push(innerTodo);
