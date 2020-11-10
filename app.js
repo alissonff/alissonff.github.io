@@ -135,7 +135,7 @@ function getTodos(){
 
         //creating LI
         const newTodo = document.createElement('li');
-        newTodo.innerText = todo;
+        newTodo.innerText = todo.todo;
         newTodo.classList.add('todo-item');
         todoDiv.appendChild(newTodo);
 
