@@ -160,17 +160,26 @@ function getTodos(){
 }
 
 function removeLocalTodos(todo){
-    let todos;
-    let updatedTodos = [];
-    if(localStorage.getItem('todos') === null){
-        todos = [];
+    //Check
+  let todos;
+  let updatedTodos = [];
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  const todoIndex = todo.children[0].innerText;
+  todos.forEach(function (innerTodo, index) {
+    console.log(innerTodo, todoInput);
+    if (innerTodo.todo === todoIndex) {
+      console.log("se borra item", innerTodo);
     } else {
-        todos = JSON.parse(localStorage.getItem('todos'));
+      console.log("se agrega item", innerTodo);
+      updatedTodos.push(innerTodo);
     }
-    
-    const todoIndex = todo.children[0].innerText;
-    todos.splice(todos.indexOf(todoIndex), 1);
-    localStorage.setItem('todos', JSON.stringify(todos));
+  });
+  console.log(updatedTodos);
+  localStorage.setItem("todos", JSON.stringify(updatedTodos));
 }
 
 function completeTodo(todo) {
