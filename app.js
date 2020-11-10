@@ -172,9 +172,7 @@ function removeLocalTodos(todo){
   todos.forEach(function (innerTodo, index) {
     console.log(innerTodo, todoInput);
     if (innerTodo.todo === todoIndex) {
-      console.log("se borra item", innerTodo);
     } else {
-      console.log("se agrega item", innerTodo);
       updatedTodos.push(innerTodo);
     }
   });
