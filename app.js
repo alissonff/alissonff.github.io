@@ -176,7 +176,7 @@ function removeLocalTodos(todo){
       updatedTodos.push(innerTodo);
     }
   });
-  console.log(updatedTodos);
+  
   localStorage.setItem("todos", JSON.stringify(updatedTodos));
 }
 
