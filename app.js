@@ -33,9 +33,6 @@ function addTodo(event){
     newTodo.setAttribute('completed', false);
     todoDiv.appendChild(newTodo);
 
-    //add todos to a local storage
-    saveLocalTodos(todoInput.value);
-
     //completed button
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
@@ -50,6 +47,9 @@ function addTodo(event){
 
     //Append Todo List
     todoList.appendChild(todoDiv);
+
+    //add todos to a local storage
+    saveLocalTodos(todoInput.value);
     
     //clear todo input value
     todoInput.value = "";
